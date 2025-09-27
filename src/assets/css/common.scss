@@ -1,0 +1,21 @@
+@for $i from 1 through 9 {
+  .font-weight-#{$i}00 {
+    font-weight: $i * 100;
+  }
+}
+
+@each $direction, $property in (t: top, r: right, b: bottom, l: left) {
+  @each $size in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50 {
+    .m#{$direction}-#{$size} {
+      margin-#{$property}: #{$size}px;
+    }
+  }
+}
+
+@each $direction, $property in (t: top, r: right, b: bottom, l: left) {
+  @each $size in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50 {
+    .p#{$direction}-#{$size} {
+      padding-#{$property}: #{$size}px;
+    }
+  }
+}
